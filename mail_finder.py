@@ -71,4 +71,4 @@ def find_email():
     return jsonify({"message": "Sorry, not able to find a valid email ID."}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.getenv("PORT", 6000)))
